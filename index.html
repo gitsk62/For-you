@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Reclaim - A Heartfelt Apology</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fixed Flowers on Edges -->
+    <div class="flower flower-top-left">🌸</div>
+    <div class="flower flower-top-right">🌺</div>
+    <div class="flower flower-bottom-left">🌹</div>
+    <div class="flower flower-bottom-right">🌷</div>
+    <div class="flower flower-mid-left">🌻</div>
+    <div class="flower flower-mid-right">🌼</div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-logo">An Apology</h2>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#apology">Apology</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#pledge">Pledge</a></li>
+                <li><a href="#closing">Closing</a></li>
+                <li><a href="#contact">Reach</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline">I was wrong. I take full responsibility.</h1>
+            <p class="hero-subheadline">I hurt you to preserve an image. I own that mistake, and I’m changing.</p>
+            <button class="cta-button" onclick="scrollToSection('apology')">Learn More</button>
+        </div>
+        <div class="hearts-container"></div>
+    </section>
+
+    <!-- Apology Section -->
+    <section id="apology" class="section apology">
+        <div class="container">
+            <h2 class="section-title">My Apology</h2>
+            <div class="subsections">
+                <div class="subsection">
+                    <h3>Acknowledge</h3>
+                    <p>I recognize the pain I caused you. Your feelings are valid, and I see now how my actions affected you deeply.</p>
+                </div>
+                <div class="subsection">
+                    <h3>Responsibility</h3>
+                    <p>I take full ownership of my mistakes. There are no excuses; I was wrong, and I regret it profoundly.</p>
+                </div>
+                <div class="subsection">
+                    <h3>Change</h3>
+                    <p>I'm committed to personal growth. I'll work on myself to ensure this doesn't happen again, for us and for me.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="section memories">
+        <div class="container">
+            <h2 class="section-title">Our Cherished Memories</h2>
+            <div class="gallery">
+                <div class="slider-container">
+                    <div class="slides">
+                        <div class="slide active">
+                            <img src="C:\Users\DeLL\Pictures\Screenshots\Screenshot 2025-05-19 223008.png" alt="Memory 1">
+                            <p class="caption">I Do not have any image of ours.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://media.tenor.com/6oVpxIFwAAoAAAAM/cat-kiss.gif" alt="Memory 2">
+                            <p class="caption">That laugh we shared on our road trip.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://m.media-amazon.com/images/I/51V+1wd2dFL.jpg" alt="Memory 3">
+                            <p class="caption">The quiet moments that mean everything.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://i.pinimg.com/564x/08/a6/c2/08a6c23b798cb804bfc52c15330d0c37.jpg" alt="Memory 4">
+                            <p class="caption">Building dreams together, hand in hand.</p>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pledge Section -->
+    <section id="pledge" class="section pledge">
+        <div class="container">
+            <h2 class="section-title">My Pledge to You</h2>
+            <div class="pledge-cards">
+                <div class="card">
+                    <h3>Communicate Openly</h3>
+                    <p>I'll share my thoughts honestly and listen to yours without judgment.</p>
+                </div>
+                <div class="card">
+                    <h3>Be More Attentive</h3>
+                    <p>Your needs and feelings will always come first in my actions.</p>
+                </div>
+                <div class="card">
+                    <h3>Support Your Dreams</h3>
+                    <p>I'll stand by you, cheering on every step of your journey.</p>
+                </div>
+                <div class="card">
+                    <h3>Cherish Every Moment</h3>
+                    <p>I'll make time for us, creating more beautiful memories together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section id="closing" class="section closing">
+        <div class="container">
+            <h2 class="section-title">Final Words</h2>
+            <p class="closing-message">Whether you forgive me or not, my respect for you remains. You are strong, beautiful, and deserving of all the love in the world.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Reach Out</h2>
+            <a href="love-question.html" class="reach-out-button">Reach Out?</a>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

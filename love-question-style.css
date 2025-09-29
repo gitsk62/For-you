@@ -1,0 +1,251 @@
+/* Love Question Page Styles - Reusing Project Reclaim Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #e91e63;
+}
+
+.back-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #e91e63;
+}
+
+/* Question Container */
+.question-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 20px;
+    text-align: center;
+}
+
+#question-text {
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 50px;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+#question-text.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.buttons.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Yes Button */
+.yes-button {
+    background: rgba(233, 30, 99, 0.8);
+    color: #ffffff;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(233, 30, 99, 0.5);
+    min-width: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+.yes-button:hover {
+    background: #e91e63;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.6);
+}
+
+/* Prominent Yes for Second Question */
+.yes-button.prominent {
+    padding: 25px 60px;
+    font-size: 1.8em;
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px rgba(233, 30, 99, 0.5); }
+    to { box-shadow: 0 0 30px rgba(233, 30, 99, 0.8); }
+}
+
+/* No Button */
+.no-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 50px;
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    min-width: 150px;
+    position: relative;
+    z-index: 5;
+}
+
+.no-button:hover {
+    background: rgba(233, 30, 99, 0.3);
+    border-color: #e91e63;
+    transform: scale(1.05);
+}
+
+/* Runaway No Button */
+.no-button.runaway {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: none;
+    pointer-events: auto;
+}
+
+/* Celebration Container */
+.celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001; /* Higher than navbar to overlay header */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: #e91e63;
+    pointer-events: none;
+    animation: burst-celebrate 4s ease-out forwards;
+    transform-origin: center;
+}
+
+@keyframes burst-celebrate {
+    0% {
+        transform: translate(0, 0) scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(var(--dx), var(--dy)) scale(1.5) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--dx), calc(var(--dy) - 120vh)) scale(0.8) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #question-text {
+        font-size: 2em;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+
+    .yes-button,
+    .no-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        min-width: 120px;
+    }
+
+    .yes-button.prominent {
+        padding: 20px 40px;
+        font-size: 1.4em;
+    }
+
+    .question-container {
+        padding: 120px 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
