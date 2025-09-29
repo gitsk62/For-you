@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     noBtn.addEventListener('click', function() {
         if (currentQuestion === 1) {
             currentQuestion = 2;
-            questionText.textContent = 'Think again (the last one)';
+            questionText.textContent = 'Think again, Do you LOVE me?';
             // Make Yes prominent
             yesBtn.classList.add('prominent');
             // Activate runaway for No
@@ -136,3 +136,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
